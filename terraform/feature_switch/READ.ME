@@ -1,1 +1,11 @@
 For further explanation:
+
+What if we want a new resource in dev, and not prod?
+We created a turnery operator 
+In the main.tf example (line 12) how it works:
+For count, create one EC2 instance if it's equal to prod, BUT if it's not equal to prod then don't create anything.
+
+Run this command ###-- terraform plan -var-file="test.tfvars"
+    #nothing happens
+Run this command ###-- terraform plan -var-file="prod.tfvars"
+    #it creates one instance 
