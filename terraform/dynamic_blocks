@@ -43,3 +43,15 @@ resource "aws_security_group" "webtraffic" {
     }
     }
 }
+
+#two variables added for dynamic block (ingressrules, egressrules)
+#created a dynamic block, 
+#We've created a dynamic block before each loop itâ€™s gonna go through every element in our list. And there's two at the moment: 80,443. 
+#As it goes through once, the value it's set to is going to be port. So ports when it starts is gonna be set to 80. And what it does here is it says port.value. So we set the first one 80 so it creates the first ingress block then it does it again because there's two elements inside. So now the port is set to 443 and then it's gonna create another ingress block. And it's gonna set port.value to 443.
+
+#This is a really fast way of setting up security groups if we have multiple rules and we only need to edit it in one place, we'll set the top in the variables.
+
+#terraform init
+#terraform apply
+#terraform destroy
+# option + command + S
