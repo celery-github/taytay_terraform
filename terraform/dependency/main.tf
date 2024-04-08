@@ -14,5 +14,4 @@ resource "aws_instance" "web" {
     depends_on = [ aws_instance.db ]
 }
 
-
 #can use for anything, like, EIPs, not just EC2 instances
