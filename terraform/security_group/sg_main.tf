@@ -9,7 +9,7 @@ resource "aws_instance" "ec2" {
 }
 
 resource "aws_security_group" "webtraffic" {
-    name = "Allow HTTPS"
+    name = "Allow HTTP"
 
     ingress{
         from_port = 443
